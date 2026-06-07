@@ -8,18 +8,21 @@
             background-image: url("xiangpu.png");
             background-repeat: no-repeat;
             background-attachment: fixed;
-            background-size: contain;
+            background-size: cover;
             background-position: center;
         }
         @media (max-width: 768px) {
             body {
                 background-size: cover;  /* 手机用cover */
+                background-repead: cover;
                 background-position: top center;  /* 从顶部开始 */
                 }
         }
         .container{
-            left: 600px;
-            top: 200px;
+            display: flex;
+            flex-direction: column;
+            left: 30%;
+            top: 26%;
             position: absolute;
         }
         </style>
