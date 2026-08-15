@@ -1,28 +1,434 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
+
 <head>
-    <title>Attention is all you need</title>
-    <style>
-        body {
-            background-color: #8355B1;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: contain;
-            background-position: center;
-        }
-        .container{
-            display: flex;
-            flex-direction: column;
-            left: 30%;
-            top: 26%;
-            position: absolute;
-        }
-        </style>
+    <meta charset="UTF-8">
+
+    <!-- 让网页在手机上正常显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>我的个人博客</title>
+
+    <!-- 网站描述 -->
+    <meta name="description" content="这是我的个人博客，记录学习、阅读、思考与生活。">
+
+    <!-- 引入 CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container">
-    <img src="huang.jpg" alt="huang" width="200">
-    <h1>Huang</h1>
-    <p>hello!everyone!this is a simple blog.i created it to learning HTML and CSS.</p>
-    </div>  
+
+    <!-- =========================
+         顶部导航栏
+    ========================== -->
+    <header class="header">
+
+        <div class="nav-container">
+
+            <!-- 网站 Logo / 名称 -->
+            <a href="#" class="logo">
+                My Blog
+            </a>
+
+            <!-- 手机端菜单按钮 -->
+            <button class="menu-toggle" id="menuToggle" aria-label="打开菜单">
+                ☰
+            </button>
+
+            <!-- 导航菜单 -->
+            <nav class="nav" id="nav">
+
+                <a href="#home">首页</a>
+                <a href="#posts">文章</a>
+                <a href="#categories">分类</a>
+                <a href="#about">关于我</a>
+
+                <!-- 深色 / 浅色模式 -->
+                <button class="theme-toggle" id="themeToggle">
+                    🌙
+                </button>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         页面主要内容
+    ========================== -->
+    <main>
+
+
+        <!-- =========================
+             首页 / 个人介绍
+        ========================== -->
+        <section class="hero" id="home">
+
+            <div class="hero-container">
+
+                <div class="hero-text">
+
+                    <p class="hero-label">
+                        WELCOME TO MY BLOG
+                    </p>
+
+                    <h1>
+                        记录思考，
+                        <br>
+                        分享生活。
+                    </h1>
+
+                    <p class="hero-description">
+                        这是我的个人空间。
+                        我会在这里记录学习、阅读、金融、
+                        日语以及生活中的一些思考。
+                    </p>
+
+                    <a href="#posts" class="primary-button">
+                        阅读文章
+                    </a>
+
+                </div>
+
+
+                <!-- 个人头像区域 -->
+                <div class="hero-avatar">
+
+                    <div class="avatar">
+                        M
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             博客文章区域
+        ========================== -->
+        <section class="posts-section" id="posts">
+
+            <div class="section-container">
+
+                <div class="section-header">
+
+                    <div>
+                        <p class="section-label">
+                            MY ARTICLES
+                        </p>
+
+                        <h2>
+                            最近文章
+                        </h2>
+                    </div>
+
+                </div>
+
+
+                <!-- 搜索框 -->
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="搜索文章..."
+                    >
+
+                    <span>
+                        🔍
+                    </span>
+
+                </div>
+
+
+                <!-- 文章列表 -->
+                <div class="posts-grid" id="postsContainer">
+
+
+                    <!-- 文章 1 -->
+                    <article
+                        class="post-card"
+                        data-title="如何开始学习金融"
+                        data-category="金融"
+                    >
+
+                        <div class="post-meta">
+                            <span class="category">
+                                金融
+                            </span>
+
+                            <span>
+                                2026-08-15
+                            </span>
+                        </div>
+
+                        <h3>
+                            如何开始学习金融
+                        </h3>
+
+                        <p>
+                            从金融基础知识开始，
+                            逐步建立自己的金融知识体系。
+                        </p>
+
+                        <a href="#" class="read-more">
+                            阅读全文 →
+                        </a>
+
+                    </article>
+
+
+                    <!-- 文章 2 -->
+                    <article
+                        class="post-card"
+                        data-title="我的日语学习记录"
+                        data-category="日语"
+                    >
+
+                        <div class="post-meta">
+
+                            <span class="category">
+                                日语
+                            </span>
+
+                            <span>
+                                2026-08-12
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            我的日语学习记录
+                        </h3>
+
+                        <p>
+                            记录日语学习过程中的问题、
+                            方法以及一些有趣的发现。
+                        </p>
+
+                        <a href="#" class="read-more">
+                            阅读全文 →
+                        </a>
+
+                    </article>
+
+
+                    <!-- 文章 3 -->
+                    <article
+                        class="post-card"
+                        data-title="阅读的意义"
+                        data-category="阅读"
+                    >
+
+                        <div class="post-meta">
+
+                            <span class="category">
+                                阅读
+                            </span>
+
+                            <span>
+                                2026-08-10
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            阅读的意义
+                        </h3>
+
+                        <p>
+                            为什么我们需要阅读？
+                            阅读又如何影响我们的思考方式？
+                        </p>
+
+                        <a href="#" class="read-more">
+                            阅读全文 →
+                        </a>
+
+                    </article>
+
+
+                    <!-- 文章 4 -->
+                    <article
+                        class="post-card"
+                        data-title="学习 JavaScript"
+                        data-category="编程"
+                    >
+
+                        <div class="post-meta">
+
+                            <span class="category">
+                                编程
+                            </span>
+
+                            <span>
+                                2026-08-08
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            学习 JavaScript
+                        </h3>
+
+                        <p>
+                            从零开始学习 JavaScript，
+                            并尝试用它制作自己的网页。
+                        </p>
+
+                        <a href="#" class="read-more">
+                            阅读全文 →
+                        </a>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             分类区域
+        ========================== -->
+        <section class="categories-section" id="categories">
+
+            <div class="section-container">
+
+                <p class="section-label">
+                    CATEGORIES
+                </p>
+
+                <h2>
+                    文章分类
+                </h2>
+
+
+                <div class="categories">
+
+                    <button
+                        class="category-button active"
+                        data-category="全部"
+                    >
+                        全部
+                    </button>
+
+                    <button
+                        class="category-button"
+                        data-category="金融"
+                    >
+                        金融
+                    </button>
+
+                    <button
+                        class="category-button"
+                        data-category="日语"
+                    >
+                        日语
+                    </button>
+
+                    <button
+                        class="category-button"
+                        data-category="阅读"
+                    >
+                        阅读
+                    </button>
+
+                    <button
+                        class="category-button"
+                        data-category="编程"
+                    >
+                        编程
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             关于我
+        ========================== -->
+        <section class="about-section" id="about">
+
+            <div class="section-container">
+
+                <div class="about-content">
+
+                    <div>
+
+                        <p class="section-label">
+                            ABOUT ME
+                        </p>
+
+                        <h2>
+                            关于我
+                        </h2>
+
+                    </div>
+
+
+                    <div class="about-text">
+
+                        <p>
+                            你好，我是这个博客的作者。
+                        </p>
+
+                        <p>
+                            我喜欢学习新的知识，
+                            也喜欢阅读、研究金融、
+                            学习日语以及探索互联网。
+                        </p>
+
+                        <p>
+                            创建这个博客的目的，
+                            是记录自己的学习过程，
+                            也希望通过写作整理自己的思考。
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================
+         页脚
+    ========================== -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <p>
+                © 2026 My Blog
+            </p>
+
+            <p>
+                Made with HTML · CSS · JavaScript
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- 引入 JavaScript -->
+    <script src="script.js"></script>
+
 </body>
+
+</html>
